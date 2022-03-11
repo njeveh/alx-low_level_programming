@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -10,13 +11,14 @@
 
 int main(void)
 {
-	int i = 97;
-	
-	while (i < 123)
+	char alpha = 'a'
+
+	while (alpha <= 'z')
 	{
-		putchar(i);
+		putchar(alpha);
 		++i;
 	}
+	
 	putchar(10);
 	
 	return (0);
