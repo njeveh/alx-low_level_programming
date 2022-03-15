@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * main - prints Holberton
@@ -13,7 +13,7 @@ int main(void)
 	char text[7] = "_putchar";
 	int i;
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i <=6; i++)
 	{
 		_putchar(text[i]);
 	}
