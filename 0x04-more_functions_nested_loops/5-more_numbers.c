@@ -14,7 +14,6 @@ void more_numbers(void)
 		{
 			if (i == 10)
 				break;
-			
 			if (j > 57)
 			{
 				k = 49;
