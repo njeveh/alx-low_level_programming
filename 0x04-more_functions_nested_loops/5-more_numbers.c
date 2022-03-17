@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
  * more_numbers - prints 10 times the numbers, from 0 to 14
@@ -7,15 +6,24 @@
 
 void more_numbers(void)
 {
-	int i, j;
+	int i, j, k;
 
 	for (i = 0; i <= 9; ++i)
 	{
-		for (j = 0, j <= 14; ++j)
+		for (j = 48, k = 48; j <= 62 && k <= 57; ++j, ++k)
 		{
-			_putchar(toascii(i));
+			if (j > 57)
+			{
+				k = 49;
+			}
+
+			_putchar(k);
+
+			if (j > 57)
+			{
+				_putchar(j - 9);
+			}
 		}
 		_putchar(10);
 	}
-	_putcahr(10);
 }
