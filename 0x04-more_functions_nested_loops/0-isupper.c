@@ -1,3 +1,5 @@
+#inclide "main.h"
+
 /**
  * _isupper - checks for uppercase character
  * @c: is an ascii character
