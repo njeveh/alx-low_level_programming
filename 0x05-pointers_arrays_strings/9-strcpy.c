@@ -19,7 +19,6 @@ char *_strcpy(char *dest, char *src)
 		++src;
 		++temp;
 	}
-	++temp;
 	*temp = '\0';
 	return (dest);
 }
