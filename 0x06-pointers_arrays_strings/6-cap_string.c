@@ -1,6 +1,6 @@
 #include "main.h"
 
- /**
+/**
  * *cap_string - capitalises every first letter of words in a string
  * @s: string to capitalise
  *
