@@ -11,15 +11,16 @@
 
 char *_strchr(char *s, char c)
 {
-	char *temp = s;
+	char *temp = 0;
 
-	while (*temp != '\0')
+	while (*s != '\0')
 	{
-		if (*temp == c)
+		if (*s == c)
 		{
-			return (temp);
+			temp = s;
+			break;
 		}
 		++temp;
 	}
-	return (0);
+	return (temp);
 }
