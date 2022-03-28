@@ -11,7 +11,7 @@
 
 char *_strchr(char *s, char c)
 {
-	char *temp = 0;
+	char *temp = NULL;
 
 	while (*s != '\0')
 	{
@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 			temp = s;
 			break;
 		}
-		++temp;
+		++s;
 	}
 	return (temp);
 }
