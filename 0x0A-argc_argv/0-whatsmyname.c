@@ -8,14 +8,12 @@
  * Return: 0 on success
  */
 
-int main(int argc, char **argv)
+int main(__attribute__((unused)) int argc, char **argv)
 {
-	int i = 0;
-
-	while (argv[0][i] != '\0')
+	while (**argv != '\0')
 	{
-		_putchar(argv[0][i]);
-		++i;
+		_putchar(**argv);
+		++*argv;
 	}
 	_putchar(10);
 	return (0);
