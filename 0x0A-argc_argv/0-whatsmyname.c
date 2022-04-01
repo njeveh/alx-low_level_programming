@@ -15,4 +15,6 @@ int main(int argc, char **argv)
 		_putchar(**argv);
 		++*argv;
 	}
+	_putchar(10);
+	return (0);
 }
