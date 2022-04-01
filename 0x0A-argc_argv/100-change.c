@@ -8,7 +8,7 @@
  * @argc: the number of arguments passed to the function
  * @argv: an aray of the commanf line arguments passed to the functionn
  *
- * Return: 0 if succesfule
+ * Return: 0 on success
  */
 
 int main(int argc, char *argv[])
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	int cent_vals[] = {25, 10, 5, 2, 1};
 	int cents = atoi(argv[1]);
-	int number_of_cents, balance;
+	int number_of_cents, balance, i;
 
 	if (cents < 0)
 	{
@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
+	number_of_cents = 0;
+	balance = cents;
 	for (i = 0; i < 5; ++i)
 	{
 		number_of_cents += balance / cent_vals[i];
