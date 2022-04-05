@@ -24,7 +24,7 @@ char **strtow(char *str)
 	if (str_arr == NULL)
 		return (NULL);
 	str_arr[0] = "";
-	while (str != "\0")
+	while (*str != "\0")
 	{
 		while (*str != 32 && *str != 9 && *str != 10)
 		{
