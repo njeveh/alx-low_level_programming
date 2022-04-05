@@ -14,7 +14,6 @@
 
 char *_strdup(char *str)
 {
-	int i;
 	size_t str_size;
 	char *str_copy;
 
