@@ -15,7 +15,7 @@ char **strtow(char *str)
 	char *word;
 	int word_length, array_size;
 
-	if (*str == '' || str == NULL)
+	if (strlen(str) == 0 || str == NULL)
 		return (NULL);
 
 	word_length = 0;
@@ -62,6 +62,7 @@ char **strtow(char *str)
 char **reallocate_memory(int array_size, char *word, char **str_arr)
 {
 	char **str_temp;
+	int i;
 
 	str_temp = (char **)malloc(sizeof(char *) * array_size);
 	if (str_temp == NULL)
