@@ -29,10 +29,10 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 	strcpy(str, av[0]);
-	strcat(str, '\n');
+	strcat(str, "\n");
 	for (i = 1; i < ac; ++i)
 	{
 		strcat(str, av[i]);
-		strcat(str, '\n');
+		strcat(str, "\n");
 	}
 	return (str);
