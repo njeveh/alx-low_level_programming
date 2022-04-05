@@ -17,7 +17,6 @@ char **strtow(char *str)
 
 	if (strlen(str) == 0 || str == NULL)
 		return (NULL);
-
 	word_length = 0;
 	array_size = 1;
 	str_arr = (char **)malloc(sizeof(char *));
@@ -26,6 +25,11 @@ char **strtow(char *str)
 	str_arr[0] = "";
 	while (*str != '\0')
 	{
+		if (*str == 32 || *str == 9 || *str == 10)
+		{
+			++str;
+			continue;
+		}
 		while (*str != 32 && *str != 9 && *str != 10)
 		{
 			++word_length;
@@ -46,9 +50,7 @@ char **strtow(char *str)
 		str_arr = reallocate_memory(array_size, word, str_arr);
 		++array_size;
 	}
-	str_arr = reallocate_memory(array_size, NULL, str_arr);
-	return (str_arr);
-
+	return (reallocate_memory(array_size, NULL, str_arr));
 }
 
 /**
@@ -71,6 +73,7 @@ char **reallocate_memory(int array_size, char *word, char **str_arr)
 	{
 		str_temp[i] = str_arr[i];
 	}
+	free(str_arr);
 	str_temp[array_size - 1] = word;
 	str_arr = str_temp;
 	return (str_arr);
