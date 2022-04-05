@@ -37,7 +37,7 @@ char **strtow(char *str)
 		str -= word_length;
 		while (*str != 32 && *str != 9 && *str != 10)
 		{
-			*word = *str
+			*word = *str;
 			++str;
 			++word;
 		}
