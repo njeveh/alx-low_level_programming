@@ -71,7 +71,6 @@ char **reallocate_memory(int array_size, char *word, char **str_arr)
 	{
 		str_temp[i] = str_arr[i];
 	}
-	free(str_arr);
 	str_temp[array_size - 1] = word;
 	str_arr = str_temp;
 	return (str_arr);
