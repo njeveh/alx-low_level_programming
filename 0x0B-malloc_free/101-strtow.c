@@ -15,7 +15,7 @@ char **strtow(char *str)
 	char *word;
 	int word_length, array_size;
 
-	if (*str == "" || str == NULL)
+	if (*str == '' || str == NULL)
 		return (NULL);
 
 	word_length = 0;
@@ -24,7 +24,7 @@ char **strtow(char *str)
 	if (str_arr == NULL)
 		return (NULL);
 	str_arr[0] = "";
-	while (*str != "\0")
+	while (*str != '\0')
 	{
 		while (*str != 32 && *str != 9 && *str != 10)
 		{
@@ -39,10 +39,10 @@ char **strtow(char *str)
 		{
 			*word = *str
 			++str;
-			++word
+			++word;
 		}
 		++word;
-		*word = "\0";
+		*word = '\0';
 		str_arr = reallocate_memory(array_size, word, str_arr);
 		++array_size;
 	}
@@ -71,7 +71,7 @@ char **reallocate_memory(int array_size, char *word, char **str_arr)
 		str_temp[i] = str_arr[i];
 	}
 	free(str_arr);
-	str_temp[array_size - 1] = NULL;
+	str_temp[array_size - 1] = word;
 	str_arr = str_temp;
 	return (str_arr);
 }
