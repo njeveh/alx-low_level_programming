@@ -15,7 +15,7 @@ char **strtow(char *str)
 	char *word;
 	int word_length, array_size;
 
-	if (str == "" || str == NULL)
+	if (*str == "" || str == NULL)
 		return (NULL);
 
 	word_length = 0;
