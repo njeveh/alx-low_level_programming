@@ -61,7 +61,7 @@ char **strtow(char *str)
 
 char **reallocate_memory(int array_size, char *word, char **str_arr)
 {
-	char **temp_arr;
+	char **str_temp;
 
 	str_temp = (char **)malloc(sizeof(char *) * array_size);
 	if (str_temp == NULL)
