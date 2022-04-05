@@ -36,3 +36,4 @@ char *argstostr(int ac, char **av)
 		strcat(str, "\n");
 	}
 	return (str);
+}
