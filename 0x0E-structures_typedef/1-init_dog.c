@@ -8,7 +8,6 @@
  * @age: float value for dog's age
  * @owner: character pointer to the dog's owner name
  *
- * Retrun:void
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
