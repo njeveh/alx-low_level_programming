@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
+#include <stdio.h>
 
 /**
  * free_dog - frees struct dog
