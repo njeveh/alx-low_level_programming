@@ -1,10 +1,10 @@
-#include "main.h"
-#include <stdlib.h>
+#include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * free_dog - frees struct dog
- * @d: pointer to struct dog
+ * free_dog - free the doggos
+ * @d: dog
  */
 
 void free_dog(dog_t *d)
