@@ -18,6 +18,8 @@ int *array_range(int min, int max)
 		return (NULL);
 	size = 1 + max - min;
 	ptr = malloc(sizeof(*ptr) * size);
+	if (ptr == NULL)
+		return (NULL);
 	while (min <= max)
 	{
 		*ptr = min;
