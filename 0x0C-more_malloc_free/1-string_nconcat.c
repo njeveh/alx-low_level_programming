@@ -13,32 +13,53 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j, s1_len, s2_len, str_length;
+	int len1, len2, t_len, i, j;
 	char *ptr;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	s1_len = strlen(s1);
-	s2_len = strlen(s2);
-	s2_len =  n >= s2_len ? s2_len : n;
-	str_length = s1_len + s2_len;
-	ptr = malloc(sizeof(char) * (str_length + 1));
+
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len2 = n >= len2 ? len2 : n;
+	t_len = len1 + len2 + 1;
+	ptr = malloc(sizeof(*ptr) * t_len);
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
-	while (i < s1_len)
+	while (*s1 != '\0')
 	{
-		ptr[i] = s1[i];
+		ptr[i] = *s1;
+		++s1;
 		++i;
 	}
-	j = 0;
-	while (j < s2_len)
+
+	for (j = 0; j < len2; ++j, ++i)
 	{
-		ptr[i + j] = s2[j];
-		++j;
+		ptr[i] = s2[j];
 	}
-	ptr[i + j] = '\0';
+	++i;
+	ptr[i] = '\0';
 	return (ptr);
+}
+
+/**
+ * _strlen - determines the length of a string
+ * @ptr: pointer to the string
+ *
+ * Return: int - the string length
+ */
+
+int _strlen(char *ptr)
+{
+	int len = 0;
+
+	while (*ptr != '\0')
+	{
+		++len;
+		++ptr;
+	}
+	return (len);
 }
