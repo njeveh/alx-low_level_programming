@@ -6,6 +6,8 @@
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
+ *
+ * Description: a type holding a dog's data
  */
 
 struct dog
