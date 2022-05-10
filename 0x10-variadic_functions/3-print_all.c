@@ -10,21 +10,13 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i, j;
-	char *fmt;
-	char *str;
-	char *separator;
+	char *str, *separator, *fmt = format;
+	int j, i = _strlen(fmt);
 
-	fmt = format;
-	i = _strlen(fmt);
 	va_start(ap, i);
-	j = 0;
 	while (*fmt)
 	{
-		if (j == i - 1)
-			separator = "\n";
-		else
-			separator = ", ";
+		separator = (j == (i - 1)) ? "\n" : ", ";
 		if (*fmt == 'c' || *fmt == 'i' || *fmt == 'f' || *fmt == 's')
 		{
 			switch (*fmt)
@@ -51,7 +43,6 @@ void print_all(const char * const format, ...)
 				printf("%s%s", str, separator);
 				break;
 			}
-			default:
 			}
 			++fmt;
 			++j;
