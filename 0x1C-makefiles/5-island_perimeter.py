@@ -11,6 +11,22 @@ def island_perimeter(grid):
         grid (list): A list of lists of integers
     '''
     perimeter = 0
+        """perimeter of island (1) surrounded by water (0)
+    Args:
+        grid (list): list of lists
+    Returns:
+        perimeter number of cells the island is surrounded by water
+    """
+    perimeter = 0
+
+    if not grid:
+        return perimeter
+    if type(grid) is not list:
+        return perimeter
+    rows = len(grid)
+    if rows < 1:
+        return perimeter
+    
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if grid[i][j] == 1:
